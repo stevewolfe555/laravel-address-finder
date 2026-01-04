@@ -11,12 +11,7 @@
 
 ## Tech Stack
 
-- php
-- rust
-
-## Frameworks
-
-- symfony
+- PHP
 
 ## Dependencies
 
