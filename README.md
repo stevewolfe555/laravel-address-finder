@@ -10,12 +10,7 @@ This package provides a facade for address searching. Currently the only driver 
 
 ## Tech Stack
 
-- php
-- rust
-
-## Frameworks
-
-- symfony
+- PHP
 
 ## Installation
 
