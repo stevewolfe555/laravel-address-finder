@@ -2,6 +2,16 @@
 
 ## System Architecture
 
+### Frameworks & Libraries
+
+- **symfony**
+
+### Programming Languages
+
+- PHP
+- php
+- rust
+
 ## Directory Structure
 
 ```
