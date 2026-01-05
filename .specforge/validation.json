@@ -10,7 +10,7 @@
     "steps": [
         {
             "name": "composer_install",
-            "command": "composer install --no-interaction"
+            "command": "composer install --no-interaction --no-audit"
         },
         {
             "name": "composer_validate",
