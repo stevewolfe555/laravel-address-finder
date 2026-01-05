@@ -2,6 +2,14 @@ name: SpecForge Validation
 
 on:
   pull_request:
+  push:
+    branches:
+      - 'docs/**'
+    paths:
+      - '.specforge/**'
+      - 'README.md'
+      - 'docs/**'
+      - '.github/workflows/specforge-validate.yml'
   workflow_dispatch:
 
 jobs:
