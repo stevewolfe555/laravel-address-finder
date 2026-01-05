@@ -1,0 +1,24 @@
+{
+    "repo_kind": "php_package",
+    "runtime": {
+        "language": "php",
+        "php_constraint": ">=7.3"
+    },
+    "install": {
+        "composer_package": "cyber-duck/laravel-address-finder"
+    },
+    "steps": [
+        {
+            "name": "composer_install",
+            "command": "composer install --no-interaction"
+        },
+        {
+            "name": "composer_validate",
+            "command": "composer validate --no-check-publish"
+        },
+        {
+            "name": "tests",
+            "command": "if [ -f vendor/bin/phpunit ]; then vendor/bin/phpunit; fi"
+        }
+    ]
+}
