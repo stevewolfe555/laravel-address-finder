@@ -51,7 +51,7 @@ jobs:
               if isinstance(cmd, str) and cmd.strip():
                   commands.append(cmd)
 
-          script = '#!/usr/bin/env bash\nset -euo pipefail\n' + '\n'.join(commands) + '\n'
+          script = '#!/usr/bin/env bash\nset -euo pipefail\nset -x\n' + '\n'.join(commands) + '\n'
           pathlib.Path('/tmp/specforge_plan.sh').write_text(script)
           PY
           bash /tmp/specforge_plan.sh
