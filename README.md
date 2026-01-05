@@ -22,7 +22,7 @@ composer require cyber-duck/laravel-address-finder
 
 This repository includes a SpecForge validation plan at `.specforge/validation.json`.
 
-A GitHub Actions workflow was not added because the connected GitHub token does not have the `workflow` permission.
+Validation runs via GitHub Actions (workflow: `.github/workflows/specforge-validate.yml`).
 
 ## Usage
 
