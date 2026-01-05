@@ -18,7 +18,7 @@
         },
         {
             "name": "tests",
-            "command": "if [ -f vendor/bin/phpunit ]; then vendor/bin/phpunit; fi"
+            "command": "if [ -f vendor/bin/phpunit ]; then if [ -f phpunit.xml ]; then vendor/bin/phpunit -c phpunit.xml; elif [ -f phpunit.xml.dist ]; then vendor/bin/phpunit -c phpunit.xml.dist; elif [ -d tests ]; then vendor/bin/phpunit tests; else echo 'No PHPUnit config/tests found; skipping tests.'; fi; fi"
         }
     ]
 }
