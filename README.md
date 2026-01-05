@@ -22,26 +22,42 @@ composer require cyber-duck/laravel-address-finder
 
 This repository includes a SpecForge validation plan at `.specforge/validation.json`.
 
+The plan validates installation and basic checks in CI. It does not validate usage examples or runtime integration.
+
 Validation runs via GitHub Actions (workflow: `.github/workflows/specforge-validate.yml`).
 
 ## Usage
 
-Configuration (from `readme.md`):
+Basic example:
+
+```php
+use CyberDuck\AddressFinder\Facades\Address;
+
+$results = Address::search('10 Downing Street');
+```
+
+## Configuration
+
+Example `.env`:
+
+```dotenv
+LOQATE_API_KEY=
+ADDRESS_FINDER_CACHE=
+ADDRESS_FINDER_CACHE_DRIVER=
+ADDRESS_FINDER_DRIVER=
+LOQATE_API_BASE_URI=
+```
+
+Required (depends on the configured driver):
+
+- `LOQATE_API_KEY`
+
+Optional:
 
 - `ADDRESS_FINDER_CACHE`
 - `ADDRESS_FINDER_CACHE_DRIVER`
 - `ADDRESS_FINDER_DRIVER`
 - `LOQATE_API_BASE_URI`
-- `LOQATE_API_KEY`
-
-## Dependencies
-
-- illuminate/support
-- mockery/mockery
-- orchestra/testbench
-- php
-- phpunit/phpunit
-- sempro/phpunit-pretty-print
 
 ## Repository
 
