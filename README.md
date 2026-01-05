@@ -59,6 +59,29 @@ Optional:
 - `ADDRESS_FINDER_DRIVER`
 - `LOQATE_API_BASE_URI`
 
+## Laravel Integration
+
+Detected config files:
+
+- `config/laravel-address-finder.php`
+
+To publish the package configuration:
+
+```bash
+php artisan vendor:publish --tag=laravel-address-finder.config
+```
+
+## Testing
+
+If this repository includes tests, you can usually run them with one of the following (depending on the project):
+
+```bash
+composer test
+vendor/bin/phpunit
+```
+
+This repository also includes a machine-readable validation plan (`.specforge/validation.json`) that is executed in CI.
+
 ## Repository
 
 - **URL**: https://github.com/stevewolfe555/laravel-address-finder
