@@ -2,6 +2,10 @@
 
 ## System Architecture
 
+### Programming Languages
+
+- PHP
+
 ## Directory Structure
 
 ```

@@ -1,0 +1,57 @@
+name: SpecForge Validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 'docs/**'
+    paths:
+      - '.specforge/**'
+      - 'README.md'
+      - 'docs/**'
+      - '.github/workflows/specforge-validate.yml'
+  workflow_dispatch:
+
+jobs:
+  specforge-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+
+      - name: Run validation plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import pathlib
+
+          plan_path = pathlib.Path('.specforge/validation.json')
+          if plan_path.exists():
+              plan = json.loads(plan_path.read_text())
+          else:
+              plan = {'steps': []}
+
+          steps = plan.get('steps') if isinstance(plan, dict) else []
+          if not isinstance(steps, list):
+              steps = []
+
+          commands = []
+          for s in steps:
+              if not isinstance(s, dict):
+                  continue
+              cmd = s.get('command')
+              if isinstance(cmd, str) and cmd.strip():
+                  commands.append(cmd)
+
+          script = '#!/usr/bin/env bash\nset -euo pipefail\nset -x\n' + '\n'.join(commands) + '\n'
+          pathlib.Path('/tmp/specforge_plan.sh').write_text(script)
+          PY
+          bash /tmp/specforge_plan.sh

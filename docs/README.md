@@ -5,8 +5,32 @@
 ## Documentation Index
 
 - [Architecture](./architecture.md) - System architecture and design patterns
+- [Examples](./examples.md) - Usage examples and sample outputs
+- [Database](./database.md) - Database schema and relationships
 - [Deployment](./deployment.md) - Deployment and infrastructure guide
 - [Contributing](./CONTRIBUTING.md) - Contribution guidelines
+
+## Tech Stack
+
+- PHP
+
+## Dependencies
+
+- illuminate/support
+- mockery/mockery
+- orchestra/testbench
+- php
+- phpunit/phpunit
+- sempro/phpunit-pretty-print
+
+## Detected Documentation Files
+
+- `license.md`
+- `readme.md`
+- `docs/architecture.md`
+- `docs/CONTRIBUTING.md`
+- `docs/deployment.md`
+- `docs/README.md`
 
 ## Repository
 
