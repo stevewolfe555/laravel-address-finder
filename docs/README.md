@@ -5,7 +5,6 @@
 ## Documentation Index
 
 - [Architecture](./architecture.md) - System architecture and design patterns
-- [Examples](./examples.md) - Usage examples and sample outputs
 - [Database](./database.md) - Database schema and relationships
 - [Deployment](./deployment.md) - Deployment and infrastructure guide
 - [Contributing](./CONTRIBUTING.md) - Contribution guidelines
