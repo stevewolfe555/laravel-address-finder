@@ -36,10 +36,6 @@ use CyberDuck\AddressFinder\Facades\Address;
 $results = Address::search('10 Downing Street');
 ```
 
-## Examples
-
-See [`docs/examples.md`](./docs/examples.md) for detailed examples (including sample inputs and outputs).
-
 ## Configuration
 
 Example `.env`:
