@@ -29,6 +29,7 @@ class Suggestions
         ];
     }
 
+    
     /**
      * @return array
      */
